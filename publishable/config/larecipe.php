@@ -56,6 +56,7 @@ return [
 
     'settings'       => [
         'auth'       => false,
+        'guard'      => null,
         'ga_id'      => '',
         'middleware' => [
             'web',
@@ -194,5 +195,14 @@ return [
 
     'packages' => [
         'path' => 'larecipe-components',
+    ],
+
+    'blade-parser' => [
+        'regex' => [
+            'code-blocks' => [
+                'match' => '/\<pre\>(.|\n)*?<\/pre\>/',
+                'replacement' => '<code-block>',
+            ]
+        ]
     ]
 ];
